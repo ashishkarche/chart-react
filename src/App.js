@@ -12,12 +12,6 @@ function App() {
       auth: {
         username: 'tradesafeapi',
         password: 'Ashish0921'
-      },
-      headers: {
-        'Access-Control-Allow-Origin': '*',  // Allow all origins
-        'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',  // Allow necessary methods
-        'Access-Control-Allow-Headers': 'Content-Type, Authorization',  // Allow necessary headers
-        'Content-Type': 'application/json',  // Specify the content type
       }
     })
     .then((response) => {

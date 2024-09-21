@@ -6,9 +6,12 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const apiUrl = process.env.NODE_ENV === 'production' 
+  ? 'https://chitwanhumad.pythonanywhere.com/get-trade-general/20240921/chart' 
+  : '/get-trade-general/20240921/chart';
   useEffect(() => {
     // Fetch data with basic auth
-    axios.get('get-trade-general/20240921/chart', {
+    axios.get(apiUrl, {
       auth: {
         username: 'tradesafeapi',
         password: 'Ashish0921'

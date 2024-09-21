@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     // Fetch data with basic auth
-    axios.get('https://chitwanhumad.pythonanywhere.com/get-trade-general/20240921/chart', {
+    axios.get('/get-trade-general/20240921/chart', {
       auth: {
         username: 'tradesafeapi',
         password: 'Ashish0921'

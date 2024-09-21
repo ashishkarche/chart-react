@@ -8,12 +8,13 @@ function App() {
 
   useEffect(() => {
     // Fetch data with basic auth from the full API URL
-    axios.get('https://chitwanhumad.pythonanywhere.com/get-trade-general/20240921/chart', {
+    axios.get('https://cors-anywhere.herokuapp.com/https://chitwanhumad.pythonanywhere.com/get-trade-general/20240921/chart', {
       auth: {
         username: 'tradesafeapi',
         password: 'Ashish0921'
       }
     })
+    
       .then((response) => {
         setTradeData(response.data);
         setLoading(false);

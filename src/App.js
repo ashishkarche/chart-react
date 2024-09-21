@@ -7,17 +7,14 @@ function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch data with basic auth and CORS headers
-    axios.get('https://chitwanhumad.pythonanywhere.com/get-trade-general/20240921/chart', {
-      headers: {
-        'Access-Control-Allow-Origin': '*', // Allow all origins (not recommended for production)
-        'Content-Type': 'application/json',
-      },
+    // Fetch data with basic auth
+    axios.get('/get-trade-general/20240921/chart', {
       auth: {
         username: 'tradesafeapi',
         password: 'Ashish0921'
       }
     })
+    
       .then((response) => {
         setTradeData(response.data);
         setLoading(false);
@@ -27,7 +24,6 @@ function App() {
         setLoading(false);
       });
   }, []);
-  
 
   if (loading) {
     return <p>Loading data...</p>;

@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     // Fetch data with basic auth
-    axios.get('/get-trade-general/20240921/chart', {
+    axios.get('https://chitwanhumad.pythonanywhere.com/get-trade-general/20240921/chart', {
       auth: {
         username: 'tradesafeapi',
         password: 'Ashish0921'
@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Trade Data</h1>
+      <h1>Chart Data</h1>
       <table border="1" cellPadding="10">
         <thead>
           <tr>

@@ -7,14 +7,13 @@ function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch data with basic auth
-    axios.get('/get-trade-general/20240921/chart', {
+    // Fetch data with basic auth from the full API URL
+    axios.get('https://chitwanhumad.pythonanywhere.com/get-trade-general/20240921/chart', {
       auth: {
         username: 'tradesafeapi',
         password: 'Ashish0921'
       }
     })
-    
       .then((response) => {
         setTradeData(response.data);
         setLoading(false);
